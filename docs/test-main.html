@@ -20,16 +20,20 @@
     <p>I hope you enjoy looking around.</p>
 
     <h1>Interactive City Map Viewer</h1>
-
-    <select id="step-select" onchange="document.getElementById('map-frame').src = this.value;">
-        <option value="https://fritzel56.github.io/test-embed/toronto-step5.html">5</option>
-        <option value="https://fritzel56.github.io/test-embed/toronto-step4.html">4</option>
-        <option value="https://fritzel56.github.io/test-embed/toronto-step3.html">3</option>
-        <option value="https://fritzel56.github.io/test-embed/toronto-step2.html">2</option>
-    </select>
     
-    <iframe id="map-frame" src="https://fritzel56.github.io/test-embed/toronto-step5.html" width="800px" height="400px" style="border:none;"></iframe>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+    
+        <select id="step-select" onchange="document.getElementById('map-frame').src = this.value;">
+            <option value="https://fritzel56.github.io/test-embed/toronto-step5.html">5</option>
+            <option value="https://fritzel56.github.io/test-embed/toronto-step4.html">4</option>
+            <option value="https://fritzel56.github.io/test-embed/toronto-step3.html">3</option>
+            <option value="https://fritzel56.github.io/test-embed/toronto-step2.html">2</option>
+        </select>
+        
+        <iframe id="map-frame" src="https://fritzel56.github.io/test-embed/toronto-step5.html" width="800px" height="400px" style="border:none;"></iframe>
 
+    </div>
+    
     <h2>About the Maps</h2>
     <p>Select a city from the dropdown menu to view its interactive map.</p>
 
