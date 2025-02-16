@@ -21,38 +21,13 @@
 
     <h1>Interactive City Map Viewer</h1>
 
-    <label for="step-select">Choose a step:</label>
-    <select id="step-select" onchange="loadMap()">
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
+    <select id="step-select" onchange="document.getElementById('map-frame').src = this.value;">
+        <option value="https://fritzel56.github.io/test-embed/toronto-step4.html">4</option>
+        <option value="https://fritzel56.github.io/test-embed/toronto-step3.html">3</option>
+        <option value="https://fritzel56.github.io/test-embed/toronto-step2.html">2</option>
     </select>
-
-    <!-- Map container -->
-    <div id="map-container" style="margin-top:20px;">
-        <iframe id="map-frame" src="https://fritzel56.github.io/test-embed/toronto-step4.html" 
-                width="100%"
-                height="400px"
-                style="border:none;"></iframe>
-    </div>
-
-    <!-- JavaScript to handle map switching -->
-    <script>
-        function loadMap() {
-            const city = document.getElementById('step-select').value;
-            const mapFrame = document.getElementById('map-frame');
-
-            // Define the map URLs for each city
-            const stepMaps = {
-                "4": 'https://fritzel56.github.io/test-embed/toronto-step4.html',
-                "3": 'https://fritzel56.github.io/test-embed/toronto-step3.html',
-                "2": 'https://fritzel56.github.io/test-embed/toronto-step2.html'
-            };
-
-            // Update the iframe source
-            mapFrame.src = cityMaps[city] + "?timestamp=" + new Date().getTime();
-        }
-    </script>
+    
+    <iframe id="map-frame" src="https://fritzel56.github.io/test-embed/toronto-step4.html" width="100%" height="600" style="border:none;"></iframe>
 
     <h2>About the Maps</h2>
     <p>Select a city from the dropdown menu to view its interactive map.</p>
